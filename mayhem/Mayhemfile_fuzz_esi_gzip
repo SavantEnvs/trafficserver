@@ -1,0 +1,9 @@
+project: savantenvs/trafficserver
+target: fuzz_esi_gzip-mined-4537a58
+cmds:
+  - cmd: /mayhem/fuzz_esi_gzip
+    libfuzzer: true
+    timeout: 300
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_esi_gzip-mined-4537a58/testsuite
